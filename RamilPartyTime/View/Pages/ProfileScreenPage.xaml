@@ -1,0 +1,67 @@
+﻿<Page x:Class="RamilPartyTime.View.Pages.ProfileScreenPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RamilPartyTime.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="844" d:DesignWidth="540"
+      Title="ProfileScreenPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="239*"/>
+            <RowDefinition Height="624*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <TextBlock Padding="5" HorizontalAlignment="Center" Text="Профиль" FontSize="40" FontWeight="SemiBold" Foreground="White"/>
+            <Grid>
+                <Image Name="ProfileImg" HorizontalAlignment="Center" Height="150" Stretch="UniformToFill" Width="150">
+                    <Image.Clip>
+                        <EllipseGeometry RadiusX="75" RadiusY="75" Center="75,75"/>
+                    </Image.Clip>
+                </Image>
+            </Grid>
+        </StackPanel>
+        <StackPanel Margin="20,20,20,140" Grid.Row="1" Background="White">
+            <Label FontWeight="SemiBold" FontSize="20" Margin="0 25 0 0" Content="Номер"/>
+            <TextBox LostFocus="NumberPhoneTb_LostFocus" 
+                     GotFocus="NumberPhoneTb_GotFocus" 
+                     x:Name="NumberPhoneTb" 
+                     FontSize="20" 
+                     Margin="5" 
+                     Foreground="#FF006FB5" 
+                     Text="Номер" 
+                     BorderThickness="0" 
+                     Background="{x:Null}"/>
+            <Line X1="500" Y1="0" Stroke="Gray" StrokeThickness="1"/>
+            <Label FontWeight="SemiBold" Margin="0 25 0 0" FontSize="20" Content="Имя"/>
+            <TextBox x:Name="NameTb" 
+                     GotFocus="NameTb_GotFocus" 
+                     LostFocus="NameTb_LostFocus" 
+                     Margin="5" FontSize="20" 
+                     Foreground="#FF006FB5" 
+                     Text="Имя" 
+                     BorderThickness="0" 
+                     Background="{x:Null}"/>
+            <!--Text={Binding User.Name}-->
+            <Line  X1="500" Y1="0" Stroke="Gray" StrokeThickness="1"/>
+            <Label FontWeight="SemiBold" Margin="0 25 0 0" FontSize="20" Content="Город"/>
+            <TextBox x:Name="CityTb" LostFocus="CityTb_LostFocus" 
+                     GotFocus="CityTb_GotFocus" 
+                     Margin="5" FontSize="20" 
+                     Foreground="#FF006FB5" 
+                     Text="Город" 
+                     BorderThickness="0" 
+                     Background="{x:Null}"/>
+            <!--Text={Binding User.City}-->
+            <Line X1="500" Y1="0" Stroke="Gray" StrokeThickness="1"/>
+
+        </StackPanel>
+        <Button x:Name="ExitBtn" Click="ExitBtn_Click" Background="{x:Null}" BorderThickness="0" HorizontalAlignment="Center" Margin="0,499,0,0" Grid.Row="1" VerticalAlignment="Top" Height="82" Width="310">
+            <Image Source="/Resources/Images/ExitBtn.png" />
+        </Button>
+
+    </Grid>
+</Page>

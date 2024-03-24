@@ -1,0 +1,57 @@
+﻿<Window x:Class="RamilPartyTime.View.Windows.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RamilPartyTime.View.Windows"
+        mc:Ignorable="d"
+        Title="RegistrationWindow" Height="1000" Width="540" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="163*"/>
+            <RowDefinition Height="329*"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="/Resources/Images/Decorations.png" HorizontalAlignment="Left" Margin="249,0,0,8" Width="291"/>
+        <Image Width="200" Source="/Resources/Images/ProfileImage.png" Margin="170,84,170,0" />
+        <Grid Grid.Row="1">
+            <StackPanel Margin="20,20,20,188" Background="White">
+                <Label FontWeight="SemiBold" FontSize="20" Margin="0 25 0 0" Content="Контактные данные"/>
+                <TextBox LostFocus="EmailTb_LostFocus" 
+                     GotFocus="EmailTb_GotFocus" 
+                     x:Name="PhoneNumTb" 
+                     FontSize="20" 
+                     Margin="5" 
+                     Foreground="#FF006FB5" 
+                     Text="Твой номер" 
+                     BorderThickness="0" 
+                     Background="{x:Null}"/>
+                <Line X1="500" Y1="0" Stroke="Gray" StrokeThickness="1"/>
+                <Label FontWeight="SemiBold" Margin="0 25 0 0" FontSize="20" Content="Имя"/>
+                <TextBox x:Name="NameTb" 
+                     GotFocus="NameTb_GotFocus" 
+                     LostFocus="NameTb_LostFocus" 
+                     Margin="5" FontSize="20" 
+                     Foreground="#FF006FB5" 
+                     Text="Твоё имя" 
+                     BorderThickness="0" 
+                     Background="{x:Null}"/>
+                <Line  X1="500" Y1="0" Stroke="Gray" StrokeThickness="1"/>
+                <Label FontWeight="SemiBold" Margin="0 25 0 0" FontSize="20" Content="Город"/>
+                <TextBox x:Name="CityTb" LostFocus="CityTb_LostFocus" 
+                     GotFocus="CityTb_GotFocus" 
+                     Margin="5" FontSize="20" 
+                     Foreground="#FF006FB5" 
+                     Text="Город" 
+                     BorderThickness="0" 
+                     Background="{x:Null}"/>
+                <Line X1="500" Y1="0" Stroke="Gray" StrokeThickness="1"/>
+
+            </StackPanel>
+            <Button Name="SaveBtn" Click="SaveBtn_Click" BorderThickness="0" Background="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <Image Source="/Resources/Images/SaveBtn.png" />
+
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

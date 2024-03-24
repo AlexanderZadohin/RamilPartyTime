@@ -1,0 +1,32 @@
+﻿<Window x:Class="RamilPartyTime.View.Windows.MainScreenWindowApp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RamilPartyTime.View.Windows"
+        mc:Ignorable="d"
+        Title="MainScreenWindowApp" Height="1000" Width="540" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="856*"/>
+            <RowDefinition Height="129*"/>
+        </Grid.RowDefinitions>
+        <Frame NavigationUIVisibility="Hidden" Name="BodyFrmApp"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Name="HomeBtn" Click="HomeBtn_Click" Width="160" BorderThickness="0" Margin="10" Background="{x:Null}">
+                <Image Name="HomeImg" Source="/Resources/Images/ActiveHome.png" Width="75" />
+            </Button>
+            <Button Name="ChatBtn" Click="ChatBtn_Click" Width="160" Grid.Column="1" BorderThickness="0" Margin="10" Background="{x:Null}">
+                <Image Name="MessageImg" Source="/Resources/Images/Message.png" Width="75" />
+            </Button>
+            <Button Name="ProfileBtn" Click="ProfileBtn_Click" Width="160" Grid.Column="2" BorderThickness="0" Margin="10" Background="{x:Null}">
+                <Image Name="ProfileImg" Source="/Resources/Images/Profile.png" Width="75" />
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
